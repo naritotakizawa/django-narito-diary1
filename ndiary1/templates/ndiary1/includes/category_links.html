@@ -1,0 +1,5 @@
+<ul>
+    {% for category in category_list %}
+        <li><a href="{% url 'ndiary1:category' category.pk %}">{{ category }}({{ category.diary_count }})</a></li>
+    {% endfor %}
+</ul>

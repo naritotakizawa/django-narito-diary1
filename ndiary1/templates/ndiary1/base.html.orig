@@ -1,0 +1,69 @@
+{% load static %}
+{% load diary %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{% block title %}なりとの日記{% endblock %}</title>
+    <meta name="description"
+          content="{% block description %}なりとの日記です。とりとめない呟きや、感想、思ったことを書いています。毒にも薬にもならないでしょう。{% endblock %}">
+    <link rel="stylesheet" href="{% static 'diaries/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400|Noto+Serif+JP:200,500&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <p id="title"><a href="{% url 'diaries:list' %}">Diary</a></p>
+    <p id="subtitle">Copyright 2019 Narito Takizawa.</p>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+
+<aside>
+    <h2>Archives</h2>
+    {% render_month_links %}
+
+    <h2>Category</h2>
+    {% render_category_links %}
+
+    <h2>Link</h2>
+    <ul>
+        <li><a href="https://narito.ninja/blog/">Narito Blog</a></li>
+        <li><a href="https://narito.ninja/">Narito's Portfolio</a></li>
+        <li><a href="https://twitter.com/toritoritorina/">Twitter</a></li>
+        <li><a href="https://twitter.com/toritoritorina/">Github Repository</a></li>
+        <li><a href="http://www.amazon.co.jp/registry/wishlist/2ZCE9KHVM7FRA/ref=cm_sw_r_tw_ws_f.aTzbDCX47K6">Amazon欲しいものリスト</a></li>
+        <li><a href="https://github.com/naritotakizawa/narito.ninja/diaries/">この日記のソースコード</a></li>
+    </ul>
+
+    <h2>Search</h2>
+    {% render_search_form request %}
+
+</aside>
+
+
+<footer>
+    <p>© 2019 Narito Takizawa. 	&lt;toritoritorina@gmail.com&gt;</p>
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72333380-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-72333380-3');
+</script>
+
+</body>
+</html>

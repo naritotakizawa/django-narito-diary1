@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* 共通設定 */
+* {
+  margin: 0;
+}
+
+html {
+  background-color: #f5f5f5;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type=text] {
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: solid 1px #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+button {
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: solid 1px #fff;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* ユーティリティー */
+.container {
+  padding: 0 8px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+    box-sizing: border-box;
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1366px) {
+  .container {
+    width: 1366px;
+  }
+}
+.diary {
+  background-color: #fff;
+  margin-bottom: 32px;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.diary > h1, .diary > h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+.diary > .meta {
+  margin-bottom: 32px;
+  color: #999;
+  font-size: 14px;
+}
+.diary > .contents > p {
+  line-height: 2;
+  margin-bottom: 2em;
+}
+.diary > .contents > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.field {
+  width: 100%;
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: calc(50% - 19px);
+  right: 0;
+  border: none;
+  background: transparent;
+}
+
+.search-btn::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.search-btn::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 6px;
+  top: calc(50% + 6px);
+  left: calc(50% + 2px);
+  border-top: solid 2px #fff;
+  transform: rotate(45deg);
+}
+
+/* ヘッダー */
+#site-header {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #7C78AB;
+  color: #fff;
+}
+#site-header > p#title > a {
+  font-size: 40px;
+  color: #fff;
+}
+#site-header > img#hero {
+  width: 200px;
+}
+
+/* フッター */
+#site-footer {
+  padding: 32px 0;
+  background-color: #4D44AB;
+}
+#site-footer ul {
+  list-style-type: none;
+}
+#site-footer a {
+  color: #fff;
+}
+#site-footer a:hover {
+  opacity: 0.5;
+}
+#site-footer .container > * {
+  margin-bottom: 32px;
+}
+#site-footer .container > ul {
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  #site-footer > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* メインコンテンツ スマホ */
+#diary-list > h1, #diary-list > nav#back, #diary-detail > h1, #diary-detail > nav#back {
+  font-weight: normal;
+  font-size: 16px;
+  color: #999;
+  padding: 16px 0;
+}
+#diary-list > nav#page, #diary-detail > nav#page {
+  margin-top: -16px;
+  margin-bottom: 16px;
+}
+#diary-list > nav#page > *, #diary-detail > nav#page > * {
+  margin-right: 20px;
+  color: #999;
+}
+#diary-list > nav#page > a, #diary-detail > nav#page > a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+/* メインコンテンツ タブレット横向き */
+@media (min-width: 1024px) {
+  #diary-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    column-gap: 32px;
+  }
+  #diary-list > * {
+    grid-column: 1/-1;
+  }
+  #diary-list > .diary {
+    grid-column: auto;
+  }
+
+  #diary-detail {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+/* メインコンテンツ PC */
+@media (min-width: 1366px) {
+  #diary-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+{% extends 'ndiary1/base_site.html' %}
+{% load ndiary1 %}
+
+{% block meta_title %}{{ diary.title }} - {{ block.super }}{% endblock %}
+{% block meta_description %}{% endblock %}
+
+{% block content %}
+    <section id="diary-detail" class="container">
+        <nav id="back"><a href="#" onclick="window.history.back(); return false;">戻る</a></nav>
+        <article class="diary">
+            <h1>{{ diary.title }}</h1>
+            <p class="meta">
+                <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
+                -
+                {{ diary.category }}
+            </p>
+            <div class="contents">
+                {{ diary.text | linebreaks | urlize2 }}
+            </div>
+        </article>
+    </section>
+{% endblock %}

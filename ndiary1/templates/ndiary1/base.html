@@ -1,0 +1,55 @@
+{% load static %}
+{% load ndiary1 %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{% block meta_title %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'ndiary1/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+
+<header id="site-header">
+    <img src="{% static 'ndiary1/diary.svg' %}" id="hero">
+    <p id="title"><a href="{% url 'ndiary1:list' %}">{% block title %}{% endblock %}</a></p>
+    <p id="subtitle">{% block subtitle %}{% endblock %}</p>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer id="site-footer">
+    <div class="container">
+        {% render_month_links %}
+
+        {% render_category_links %}
+
+        <ul>
+            {% block link %}{% endblock %}
+        </ul>
+
+        {% render_search_form request %}
+    </div>
+</footer>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72333380-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-72333380-3');
+</script>
+</body>
+</html>

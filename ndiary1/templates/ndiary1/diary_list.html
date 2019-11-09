@@ -1,0 +1,48 @@
+{% extends 'ndiary1/base_site.html' %}
+{% load ndiary1 %}
+
+{% block meta_title %}{{ heading }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <section id="diary-list" class="container">
+        <h1>{{ heading }}</h1>
+
+        {% for diary in object_list %}
+
+            <article class="diary">
+                <h2><a href="{% url 'ndiary1:detail' diary.pk %}">{{ diary.title }}</a></h2>
+                <p class="meta">
+                    <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
+                    -
+                    {{ diary.category }}
+                </p>
+                <div class="contents">
+                    <p>
+                        {{ diary.text | truncatechars:100 }}
+                    </p>
+                </div>
+            </article>
+
+        {% empty %}
+            <p>記事が見つかりませんでした。</p>
+        {% endfor %}
+
+        <nav id="page">
+
+            <!-- 1つ前 の部分 -->
+            {% if page_obj.has_previous %}
+                <a id="prev" href="?{% url_replace request 'page' page_obj.previous_page_number %}"
+                   title="前ページへ">前ページ</a>
+            {% endif %}
+
+            <span id="page-info">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+            <!-- 1つ後 の部分 -->
+            {% if page_obj.has_next %}
+                <a id="next" href="?{% url_replace request 'page' page_obj.next_page_number %}" title="次ページへ">次ページ</a>
+            {% endif %}
+        </nav>
+
+    </section>
+
+{% endblock %}

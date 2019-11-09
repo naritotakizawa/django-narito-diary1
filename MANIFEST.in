@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include ndiary1/static *
+recursive-include ndiary1/templates *
+recursive-include docs *
