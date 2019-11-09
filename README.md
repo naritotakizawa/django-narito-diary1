@@ -73,7 +73,7 @@ python manage.py migrate
     </li>
     <li><a href="mailto:toritoritorina@gmail.com" target="_blank">メール</a></li>
     <li><a href="{% url 'ndiary1:rss' %}" target="_blank">RSS</a></li>
-    <li><a href="https://github.com/naritotakizawa/narito.ninja/tree/master/ndiary1/" target="_blank">ソースコード</a></li>
+    <li><a href="https://github.com/naritotakizawa/django-narito-diary1/" target="_blank">ソースコード</a></li>
 {% endblock %}
 
 {% block extrahead %}
