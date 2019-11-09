@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   color: #333;
   letter-spacing: 0.05em;
 }
@@ -94,6 +95,7 @@ iframe {
 .diary > h1, .diary > h2 {
   margin-bottom: 8px;
   font-size: 22px;
+  font-weight: 300;
 }
 .diary > .meta {
   margin-bottom: 32px;
@@ -106,6 +108,10 @@ iframe {
 }
 .diary > .contents > p:last-of-type {
   margin-bottom: 0;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .field {
@@ -189,7 +195,7 @@ iframe {
 }
 /* メインコンテンツ スマホ */
 #diary-list > h1, #diary-list > nav#back, #diary-detail > h1, #diary-detail > nav#back {
-  font-weight: normal;
+  font-weight: 300;
   font-size: 16px;
   color: #999;
   padding: 16px 0;
