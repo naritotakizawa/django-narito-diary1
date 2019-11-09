@@ -10,6 +10,7 @@ html {
 body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 14px;
+  font-weight: 300;
   color: #333;
   letter-spacing: 0.05em;
 }
@@ -97,6 +98,7 @@ iframe {
   > h1, > h2 {
     margin-bottom: 8px;
     font-size: 22px;
+    font-weight: 300;
   }
 
   > .meta {
@@ -116,6 +118,10 @@ iframe {
       }
     }
   }
+}
+
+.text-left {
+  text-align: left;
 }
 
 .field {
@@ -218,7 +224,7 @@ iframe {
 #diary-list, #diary-detail {
 
   > h1, > nav#back {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 16px;
     color: #999;
     padding: 16px 0;
