@@ -160,11 +160,14 @@ iframe {
   background-color: #7C78AB;
   color: #fff;
 }
-#site-header > p#title > a {
+#site-header p#title {
   font-size: 40px;
   color: #fff;
 }
-#site-header > img#hero {
+#site-header p#subtitle {
+  color: #fff;
+}
+#site-header img#hero {
   width: 200px;
 }
 

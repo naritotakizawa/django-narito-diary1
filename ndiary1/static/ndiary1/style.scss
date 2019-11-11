@@ -170,14 +170,16 @@ iframe {
   background-color: #7C78AB;
   color: #fff;
 
-  > p#title {
-    > a {
-      font-size: 40px;
-      color: #fff;
-    }
+  p#title {
+    font-size: 40px;
+    color: #fff;
   }
 
-  > img#hero {
+  p#subtitle {
+    color: #fff;
+  }
+
+  img#hero {
     width: 200px;
   }
 

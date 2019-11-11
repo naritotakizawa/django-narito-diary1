@@ -14,9 +14,11 @@
 <body>
 
 <header id="site-header">
-    <img src="{% static 'ndiary1/diary.svg' %}" id="hero">
-    <p id="title"><a href="{% url 'ndiary1:list' %}">{% block title %}{% endblock %}</a></p>
-    <p id="subtitle">{% block subtitle %}{% endblock %}</p>
+    <a href="{% url 'ndiary1:list' %}">
+        <img src="{% static 'ndiary1/diary.svg' %}" id="hero">
+        <p id="title">{% block title %}{% endblock %}</p>
+        <p id="subtitle">{% block subtitle %}{% endblock %}</p>
+    </a>
 </header>
 
 {% block content %}{% endblock %}
