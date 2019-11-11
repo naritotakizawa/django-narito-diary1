@@ -174,3 +174,16 @@ def url_replace(request, field, value):
     url_dict = request.GET.copy()
     url_dict[field] = str(value)
     return url_dict.urlencode()
+
+
+@register.simple_tag
+def get_return_link(request):
+    top_page = resolve_url('ndiary1:list')
+    referer = request.environ.get('HTTP_REFERER')
+    # URL直接入力やお気に入りアクセスのときはリファラがないので、トップぺージに戻す
+    if referer:
+        # リファラがある場合、前回ページが自分のサイト内であれば、そこに戻す。
+        parse_result = parse.urlparse(referer)
+        if request.get_host() == parse_result.netloc:
+            return referer
+    return top_page

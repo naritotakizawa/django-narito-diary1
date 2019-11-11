@@ -6,7 +6,7 @@
 
 {% block content %}
     <section id="diary-detail" class="container">
-        <nav id="back"><a href="#" onclick="window.history.back(); return false;">戻る</a></nav>
+        <nav id="back"><a href="{% get_return_link request %}">戻る</a></nav>
         <article class="diary">
             <h1>{{ diary.title }}</h1>
             <p class="meta">
