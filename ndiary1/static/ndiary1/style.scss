@@ -99,6 +99,7 @@ iframe {
     margin-bottom: 8px;
     font-size: 22px;
     font-weight: 300;
+    color: #1a0dab;
   }
 
   > .meta {
@@ -110,6 +111,7 @@ iframe {
 
   > .contents {
     > p {
+      color: #333;
       line-height: 2;
       margin-bottom: 2em;
 
@@ -259,7 +261,7 @@ iframe {
       grid-column: 1 / -1;
     }
 
-    > .diary {
+    > a {
       grid-column: auto;
     }
 

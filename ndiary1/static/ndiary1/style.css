@@ -96,6 +96,7 @@ iframe {
   margin-bottom: 8px;
   font-size: 22px;
   font-weight: 300;
+  color: #1a0dab;
 }
 .diary > .meta {
   margin-bottom: 32px;
@@ -103,6 +104,7 @@ iframe {
   font-size: 14px;
 }
 .diary > .contents > p {
+  color: #333;
   line-height: 2;
   margin-bottom: 2em;
 }
@@ -224,7 +226,7 @@ iframe {
   #diary-list > * {
     grid-column: 1/-1;
   }
-  #diary-list > .diary {
+  #diary-list > a {
     grid-column: auto;
   }
 
