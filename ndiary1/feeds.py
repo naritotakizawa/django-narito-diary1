@@ -6,8 +6,6 @@ from .models import Diary
 
 class LatestDiaryFeed(Feed):
     """最新日記のフィード。"""
-    title = 'My Diary - Narito Takizawa'
-    description = 'なりとの日記帳の最新情報'
     link = reverse_lazy('ndiary1:list')
 
     def items(self):
