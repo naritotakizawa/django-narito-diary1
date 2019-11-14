@@ -21,10 +21,12 @@ body {
     font-size: 16px;
   }
 }
+
 a {
   color: #1a0dab;
   text-decoration: none;
 }
+
 a:hover {
   opacity: 0.5;
 }
@@ -92,23 +94,27 @@ iframe {
   box-sizing: border-box;
   text-align: center;
 }
-.diary > h1, .diary > h2 {
+
+.diary-title {
   margin-bottom: 8px;
   font-size: 22px;
   font-weight: 300;
   color: #1a0dab;
 }
-.diary > .meta {
+
+.meta {
   margin-bottom: 32px;
   color: #999;
   font-size: 14px;
 }
-.diary > .contents > p {
+
+.contents > p {
   color: #333;
   line-height: 2;
   margin-bottom: 2em;
 }
-.diary > .contents > p:last-of-type {
+
+.contents > p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -160,14 +166,17 @@ iframe {
   background-color: #7C78AB;
   color: #fff;
 }
-#site-header p#title {
+
+p#title {
   font-size: 40px;
   color: #fff;
 }
-#site-header p#subtitle {
+
+p#subtitle {
   color: #fff;
 }
-#site-header img#hero {
+
+img#hero {
   width: 200px;
 }
 
@@ -176,44 +185,52 @@ iframe {
   padding: 32px 0;
   background-color: #4D44AB;
 }
+
 #site-footer ul {
   list-style-type: none;
 }
+
 #site-footer a {
   color: #fff;
 }
+
 #site-footer a:hover {
   opacity: 0.5;
 }
-#site-footer .container > * {
+
+#footer-container > * {
   margin-bottom: 32px;
 }
-#site-footer .container > ul {
+
+#footer-container > ul {
   padding: 0;
 }
 
 @media (min-width: 1024px) {
-  #site-footer > .container {
+  #footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 /* メインコンテンツ スマホ */
-#diary-list > h1, #diary-list > nav#back, #diary-detail > h1, #diary-detail > nav#back {
+.section-title, .back {
   font-weight: 300;
   font-size: 16px;
   color: #999;
   padding: 16px 0;
 }
-#diary-list > nav#page, #diary-detail > nav#page {
+
+nav#page {
   margin-top: -16px;
   margin-bottom: 16px;
 }
-#diary-list > nav#page > *, #diary-detail > nav#page > * {
+
+nav#page > * {
   margin-right: 20px;
   color: #999;
 }
-#diary-list > nav#page > a, #diary-detail > nav#page > a {
+
+nav#page > a {
   color: #1a0dab;
   text-decoration: none;
 }
@@ -226,9 +243,11 @@ iframe {
     grid-column-gap: 32px;
     column-gap: 32px;
   }
+
   #diary-list > * {
     grid-column: 1/-1;
   }
+
   #diary-list > a {
     grid-column: auto;
   }
@@ -245,4 +264,3 @@ iframe {
   }
 }
 
-/*# sourceMappingURL=style.css.map */

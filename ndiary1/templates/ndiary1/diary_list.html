@@ -5,12 +5,12 @@
 
 {% block content %}
     <section id="diary-list" class="container">
-        <h1>{{ heading }}</h1>
+        <h1 class="section-title">{{ heading }}</h1>
 
         {% for diary in object_list %}
             <a href="{% url 'ndiary1:detail' diary.pk %}">
                 <article class="diary">
-                    <h2>{{ diary.title }}</h2>
+                    <h2 class="diary-title">{{ diary.title }}</h2>
                     <p class="meta">
                         <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
                         -

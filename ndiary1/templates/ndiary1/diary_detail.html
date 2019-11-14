@@ -6,9 +6,9 @@
 
 {% block content %}
     <section id="diary-detail" class="container">
-        <nav id="back"><a href="{% get_return_link request %}">戻る</a></nav>
+        <nav class="back"><a href="{% get_return_link request %}">戻る</a></nav>
         <article class="diary">
-            <h1>{{ diary.title }}</h1>
+            <h1 class="diary-title">{{ diary.title }}</h1>
             <p class="meta">
                 <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
                 -
