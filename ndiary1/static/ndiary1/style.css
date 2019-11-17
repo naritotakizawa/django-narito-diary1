@@ -92,6 +92,7 @@ iframe {
   padding: 32px;
   box-sizing: border-box;
   text-align: center;
+  height: 100%;
 }
 
 .diary-title {
@@ -238,8 +239,8 @@ nav#page > a {
   margin-bottom: 32px;
 }
 
-#diary-detail > article {
-  margin-bottom: 32ox;
+#diary-detail  > articke {
+  margin-bottom: 32px;
 }
 
 /* メインコンテンツ タブレット横向き */
