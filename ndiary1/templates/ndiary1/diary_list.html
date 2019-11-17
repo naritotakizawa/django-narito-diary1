@@ -8,8 +8,9 @@
         <h1 class="section-title">{{ heading }}</h1>
 
         {% for diary in object_list %}
-            <a href="{% url 'ndiary1:detail' diary.pk %}">
-                <article class="diary">
+
+            <article class="diary">
+                <a href="{% url 'ndiary1:detail' diary.pk %}">
                     <h2 class="diary-title">{{ diary.title }}</h2>
                     <p class="meta">
                         <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
@@ -21,8 +22,8 @@
                             {{ diary.text | truncatechars:100 }}
                         </p>
                     </div>
-                </article>
-            </a>
+                </a>
+            </article>
 
         {% empty %}
             <p>記事が見つかりませんでした。</p>
