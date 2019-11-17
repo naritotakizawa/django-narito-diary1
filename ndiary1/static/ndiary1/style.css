@@ -89,7 +89,6 @@ iframe {
 }
 .diary {
   background-color: #fff;
-  margin-bottom: 32px;
   padding: 32px;
   box-sizing: border-box;
   text-align: center;
@@ -233,6 +232,14 @@ nav#page > * {
 nav#page > a {
   color: #1a0dab;
   text-decoration: none;
+}
+
+#diary-list > a {
+  margin-bottom: 32px;
+}
+
+#diary-detail > article {
+  margin-bottom: 32ox;
 }
 
 /* メインコンテンツ タブレット横向き */
