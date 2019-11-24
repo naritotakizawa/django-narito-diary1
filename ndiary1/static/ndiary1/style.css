@@ -219,7 +219,6 @@ img#hero {
 .section-title, .back {
   font-weight: 300;
   font-size: 16px;
-  color: #999;
   padding: 16px 0;
 }
 
@@ -230,11 +229,6 @@ nav#page {
 
 nav#page > * {
   margin-right: 20px;
-  color: #999;
-}
-
-nav#page > a {
-  text-decoration: none;
 }
 
 /* メインコンテンツ タブレット横向き */
