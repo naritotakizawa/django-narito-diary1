@@ -13,7 +13,6 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #333;
-  letter-spacing: 0.05em;
 }
 
 @media (min-width: 768px) {
