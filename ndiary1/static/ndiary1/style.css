@@ -22,7 +22,6 @@ body {
 }
 
 a {
-  color: #1a0dab;
   text-decoration: none;
 }
 
@@ -167,7 +166,7 @@ iframe {
 #site-header {
   padding: 100px 0;
   text-align: center;
-  background-color: #7C78AB;
+  background-color: #3E637D;
   color: #fff;
 }
 
@@ -187,7 +186,7 @@ img#hero {
 /* フッター */
 #site-footer {
   padding: 32px 0;
-  background-color: #4D44AB;
+  background-color: #3E637D;
 }
 
 #site-footer ul {
@@ -235,7 +234,6 @@ nav#page > * {
 }
 
 nav#page > a {
-  color: #1a0dab;
   text-decoration: none;
 }
 
