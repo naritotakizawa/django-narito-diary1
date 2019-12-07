@@ -77,6 +77,21 @@ python manage.py migrate
 {% endblock %}
 
 {% block extrahead %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72333380-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+    
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-72333380-3');
+    </script>
+  
+    <!-- Google Ads -->
     <script data-ad-client="ca-pub-5235456993770661" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {% endblock %}
 ```
