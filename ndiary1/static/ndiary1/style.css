@@ -99,6 +99,12 @@ iframe {
   height: 100%;
 }
 
+.diary > a:hover {
+  overflow: hidden;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+
 .diary-title {
   margin-bottom: 8px;
   font-size: 22px;
