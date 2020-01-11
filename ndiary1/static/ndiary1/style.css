@@ -258,6 +258,7 @@ nav#page > * {
   #diary-detail {
     width: 600px;
     margin: 0 auto;
+    padding: 0;
   }
 }
 /* メインコンテンツ PC */
