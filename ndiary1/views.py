@@ -7,7 +7,7 @@ from .forms import DiarySearchForm, FileUploadForm
 from .models import Diary, Category
 
 
-class DiaryMixin:
+class ArchiveListMixin:
     model = Diary
     paginate_by = 12
     date_field = 'created_at'
@@ -16,7 +16,7 @@ class DiaryMixin:
     make_object_list = True
 
 
-class DiaryList(DiaryMixin, generic.ArchiveIndexView):
+class DiaryList(ArchiveListMixin, generic.ArchiveIndexView):
 
     def get_queryset(self):
         return super().get_queryset().select_related('category')
@@ -27,7 +27,7 @@ class DiaryList(DiaryMixin, generic.ArchiveIndexView):
         return context
 
 
-class DiarySearchList(DiaryMixin, generic.ArchiveIndexView):
+class DiarySearchList(ArchiveListMixin, generic.ArchiveIndexView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -44,7 +44,7 @@ class DiarySearchList(DiaryMixin, generic.ArchiveIndexView):
         return context
 
 
-class DiaryCategoryList(DiaryMixin, generic.ArchiveIndexView):
+class DiaryCategoryList(ArchiveListMixin, generic.ArchiveIndexView):
 
     def get_queryset(self):
         self.category = category = get_object_or_404(Category, pk=self.kwargs['pk'])
@@ -56,7 +56,7 @@ class DiaryCategoryList(DiaryMixin, generic.ArchiveIndexView):
         return context
 
 
-class DiaryYearList(DiaryMixin, generic.YearArchiveView):
+class DiaryYearList(ArchiveListMixin, generic.YearArchiveView):
 
     def get_queryset(self):
         return super().get_queryset().select_related('category')
@@ -67,7 +67,7 @@ class DiaryYearList(DiaryMixin, generic.YearArchiveView):
         return context
 
 
-class DiaryMonthList(DiaryMixin, generic.MonthArchiveView):
+class DiaryMonthList(ArchiveListMixin, generic.MonthArchiveView):
     month_format = '%m'
 
     def get_queryset(self):
