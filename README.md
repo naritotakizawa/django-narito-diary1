@@ -30,30 +30,12 @@ urlpatterns = [
 ]
 ```
 
-ndiary1に組み込みのサイトマップクラスを利用することもできます。
-```python
-from django.contrib import admin
-from django.contrib.sitemaps.views import sitemap
-from django.urls import path, include
-from ndiary1.sitemaps import DiarySitemap
-
-sitemaps = {
-    'diary': DiarySitemap,
-}
-
-urlpatterns = [
-    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
-    path('admin/', admin.site.urls),
-    path('', include('ndiary1.urls')),
-]
-```
-
 マイグレートを行います。
 ```
 python manage.py migrate
 ```
 
-最後に、`ndiary1/base_site.html`を上書きすることで、日記サイト内のタイトル等の情報を上書きできます。次は、`ndiary1/base.html`の上書き例です。
+`ndiary1/base_site.html`を上書きすることで、日記サイト内のタイトル等の情報を上書きできます。上書き例です。
 ```html
 {% extends 'ndiary1/base.html' %}
 
@@ -95,3 +77,7 @@ python manage.py migrate
     <script data-ad-client="ca-pub-5235456993770661" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {% endblock %}
 ```
+
+日記は、Django管理サイトで次のように投稿します。URLは、画像やYoutubeリンクだった場合は自動的に変換されます。
+
+![画像投稿の様子](https://narito.ninja/media/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3_nwDgFOt.PNG)
