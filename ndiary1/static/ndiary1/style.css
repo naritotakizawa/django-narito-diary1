@@ -49,20 +49,6 @@ input[type=text] {
   color: #fff;
 }
 
-button {
-  font-family: "Noto Sans JP", sans-serif;
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: solid 1px #fff;
-  background-color: transparent;
-  cursor: pointer;
-  color: #fff;
-}
-
-button:hover {
-  opacity: 0.5;
-}
-
 iframe {
   width: 100%;
 }
@@ -222,12 +208,14 @@ img#hero {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
 /* メインコンテンツ スマホ */
 .section-title, .back {
   font-weight: 300;
   font-size: 16px;
   padding: 16px 0;
 }
+
 
 nav#page {
   margin-top: -16px;
