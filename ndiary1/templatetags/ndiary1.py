@@ -4,7 +4,6 @@ from django import template
 from django.db.models import Count
 from django.shortcuts import resolve_url
 from django.template.defaultfilters import stringfilter
-from django.utils import timezone
 from django.utils.html import *
 from django.utils.safestring import mark_safe
 from ndiary1.models import Diary, Category
