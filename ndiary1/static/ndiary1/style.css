@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -30,7 +31,7 @@ a:hover {
 }
 
 li {
-  margin-bottom: 5px;
+  margin: 0.5em 0;
 }
 
 img {
@@ -92,7 +93,7 @@ iframe {
 }
 
 .diary-title {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 22px;
   color: #333;
   font-weight: 400;
@@ -166,6 +167,7 @@ iframe {
 p#title {
   font-size: 40px;
   color: #fff;
+  margin: 16px 0;
 }
 
 p#subtitle {
